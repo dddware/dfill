@@ -2,6 +2,7 @@ require 'sinatra'
 require 'haml'
 require 'data_mapper'
 require 'dm-sqlite-adapter'
+require 'json'
 
 
 
@@ -12,7 +13,7 @@ DataMapper::setup(:default, "sqlite3://#{Dir.pwd}/dfill.db")
 class Line
     include DataMapper::Resource
     property :id, Serial
-    property :content, Text, :required => true
+    property :content, Text, :required => true, :length => 255
 end
 
 DataMapper.finalize.auto_upgrade!
@@ -39,15 +40,27 @@ end
 # ROUTES - Front-end
 
 get '/' do
-    @message = 'Ma teub'
     haml :index
 end
 
+get '/api/:count' do
+    count = params[:count].to_i
 
+    unless (count > 0 && count <= 100) then
+        halt 400
+    end
 
-# ROUTES - API
+    lines = Line.all.map(&:content)
 
-#
+    while (lines.length < count) do
+        lines.concat(lines)
+    end
+
+    lines.shuffle!.slice!(0, lines.length - count)
+
+    content_type :json
+    lines.to_json
+end
 
 
 
@@ -56,6 +69,7 @@ end
 get '/admin' do
     protected!
     @lines = Line.all :order => :id.desc
+
     haml :admin
 end
 
