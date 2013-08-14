@@ -1,1 +1,8 @@
-%p hola quintal
+%h3
+    Want to use this in your code?
+%p
+    Just query
+    %a{:href => '/api/n'}= "#{request.base_url}/api/n"
+    where n is an integer from 1 to 100 representing the amount of lines you need. You will get these in JSON format.
+    %br
+    For the record, this is the exact same API this application itself queries when you use it.
