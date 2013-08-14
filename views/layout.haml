@@ -1,0 +1,15 @@
+!!! 5 
+%html{:lang => "fr"}
+    %head
+        %meta{:charset => "utf-8"}
+        %meta{:name => "viewport", :content => "width=device-width, initial-scale=1"}
+        %meta{:name => "format-detection", :content => "telephone=no"}
+        /[if IE]
+            %meta{'http-equiv' => "X-UA-Compatible", :content => "IE=edge"}
+        %title dfill
+        %link{:rel => "stylesheet", :href => "/stylesheets/style.css"}
+        /[if lte IE 8]
+            %script{:src => "http://html5shim.googlecode.com/svn/trunk/html5.js"}
+
+    %body
+        =yield

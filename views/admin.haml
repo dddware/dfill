@@ -1,0 +1,18 @@
+%h1 dfill
+
+- unless (@lines.length > 0)
+    %p No lines yet!
+- else
+    %ul
+        - @lines.each do |line|
+            %li
+                #{line.content} -
+                %a{:href => "/admin/delete/#{line.id}", :onclick => "return confirm('Are you sure?');"} Delete
+
+%hr
+%form.add{:method => "POST"}
+    - (1..5).each do |counter|
+        %label
+            %input{:type => "text", :name => "line#{counter}"}
+    %label
+        %button{:type => "submit"} Add
