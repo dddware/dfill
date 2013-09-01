@@ -1,18 +1,19 @@
-%h2 Generate placeholder text
+.main.large-8.columns  
+  %h2 Generate placeholder text
 
-%form
-    %fieldset
-        %label
-            Lines
-            %select.amount
-                - (1..100).each do |counter|
-                    %option{:value => counter, :selected => ('selected' if counter == 10)} #{counter}
+  %form
+    %label
+      Lines
+      %select.amount
+        - (1..100).each do |counter|
+          %option{:value => counter, :selected => ('selected' if counter == 10)} #{counter}
 
-        %p.result
+    %textarea.result
 
-%h2 Remotely
+.api.large-4.columns
+  %h2 Remotely
 
-%p
+  %p
     Just query
     %a{:href => '/api/n'}= "#{request.base_url}/api/n"
     where n is an integer from 1 to 100 representing the amount of lines you need. You will get these in JSON format.

@@ -9,6 +9,8 @@
 
             $.getJSON('/api/' + amount, function(json) {
                 app.resultBlock.html(json.join(' '));
+                autoResizeTextareas();
+                $('.result').select();
             });
         }
     };

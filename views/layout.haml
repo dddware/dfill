@@ -11,27 +11,31 @@
         /[if lte IE 8]
             %script{:src => "http://html5shim.googlecode.com/svn/trunk/html5.js"}
 
-    %body
+    %body.container
         .row
             %h1 dfill
             %hr
+        .row
             =yield
 
         %footer.row
-            %dl
-                %dt Design
-                %dd
-                    %a{:href => "http://victordarras.fr/", :target => "_blank", :title => "Web and print Designer"} Victor Darras
-            %dl
-                %dt Development
-                %dd
-                    %a{:href => "http://www.zaibatsu.fr/", :target => "_blank", :title => "Zaibatsu - Blog de Tom Panier, développeur web"} Tom Panier
-            %dl
-                %dt Powered by
-                %dd
-                    %a{:href => "http://www.sinatrarb.com/", :target => "_blank"} Sinatra
-                    \/
-                    %a{:href => "http://foundation.zurb.com/", :target => "_blank"} Foundation
+            .columns
+                %dl
+                    %dt Design
+                    %dd
+                        %a{:href => "http://victordarras.fr/", :target => "_blank", :title => "Web and print Designer"} Victor Darras
+                %dl
+                    %dt Development
+                    %dd
+                        %a{:href => "http://www.zaibatsu.fr/", :target => "_blank", :title => "Zaibatsu - Blog de Tom Panier, développeur web"} Tom Panier
+                %dl
+                    %dt Powered by
+                    %dd
+                        %a{:href => "http://www.sinatrarb.com/", :target => "_blank"} Sinatra
+                        \/
+                        %a{:href => "http://foundation.zurb.com/", :target => "_blank"} Foundation
 
         %script{:src => "/javascripts/jquery.min.js"}
+        %script{:src => "/javascripts/autoresize.js"}
         %script{:src => "/javascripts/app.js"}
+        

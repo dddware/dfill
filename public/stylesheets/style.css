@@ -5024,6 +5024,9 @@ body > footer dl {
   body > footer dl dt, body > footer dl dd {
     display: inline; }
 
+textarea {
+  resize: none; }
+
 .admin-list {
   list-style-type: none; }
 
