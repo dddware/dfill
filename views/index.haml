@@ -1,18 +1,19 @@
-.main.large-8.columns  
-  %form
-    .lineSelector
-      %button.refresh{:type => 'button'}
-        %span ⟳
-      %span.lines 0
-      %input{:type => 'range', :class=> 'amount', :min => @range[:min], :max => @range[:max], :value => @range[:value]}
+.row
+    .main.large-8.columns
+      %form
+        .lineSelector
+          %button.refresh{:type => 'button'}
+            %span ⟳
+          %span.lines 0
+          %input{:type => 'range', :class=> 'amount', :min => @range[:min], :max => @range[:max], :value => @range[:value]}
 
-    %p.result
+        %p.result
 
-.api.large-4.columns
-  %h2 JSON REST API
+    .api.large-4.columns
+      %h2 JSON REST API
 
-  %ul
-    %li
-      Call
-      %a.apiLink{'data-href' => "#{request.base_url}/api/", :href => ''}
-    %li You can request from #{@range[:min]} to #{@range[:max]} lines
+      %ul
+        %li
+          Call
+          %a.apiLink{'data-href' => "#{request.base_url}/api/", :href => ''}
+        %li You can request from #{@range[:min]} to #{@range[:max]} lines

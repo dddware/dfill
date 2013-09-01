@@ -5024,8 +5024,8 @@ ul {
 
 body > footer .hr {
   margin-top: 0.25em;
-  padding-top: 1.25em;
-  border-top: 1px solid #999999; }
+  padding: 1.25em 0;
+  border-top: 1px solid #cccccc; }
 body > footer dl {
   margin-bottom: 0;
   font-size: 0.75em; }
@@ -5089,4 +5089,4 @@ header {
 
 .admin-add button {
   float: right;
-  margin: 1.25em 0 0; }
+  margin: 0; }
