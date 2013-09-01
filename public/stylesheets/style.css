@@ -5022,11 +5022,15 @@ ul {
   list-style-type: square;
   list-style-position: inside; }
 
+body > footer .hr {
+  margin-top: 0.25em;
+  padding-top: 1.25em;
+  border-top: 1px solid #999999; }
 body > footer dl {
   margin-bottom: 0;
   font-size: 0.75em; }
-  body > footer dl dt, body > footer dl dd {
-    display: inline; }
+body > footer dt, body > footer dd {
+  display: inline; }
 
 header {
   background: #2ba6cb;

@@ -4,6 +4,7 @@
         %meta{:charset => "utf-8"}
         %meta{:name => "viewport", :content => "width=device-width, initial-scale=1"}
         %meta{:name => "format-detection", :content => "telephone=no"}
+        %meta{:name => "description", :content => "Generate placeholder text with song lyrics and get it at the speed of light! JSON REST API available."}
         /[if IE]
             %meta{'http-equiv' => "X-UA-Compatible", :content => "IE=edge"}
         %title dfill
@@ -21,22 +22,24 @@
         %section.row
             =yield
 
-        %footer.row
-            .columns
-                %dl
-                    %dt Design
-                    %dd
-                        %a{:href => "http://victordarras.fr/", :target => "_blank", :title => "Web and print Designer"} Victor Darras
-                %dl
-                    %dt Development
-                    %dd
-                        %a{:href => "http://www.zaibatsu.fr/", :target => "_blank", :title => "Zaibatsu - Blog de Tom Panier, développeur web"} Tom Panier
-                %dl
-                    %dt Powered by
-                    %dd
-                        %a{:href => "http://www.sinatrarb.com/", :target => "_blank"} Sinatra
-                        \/
-                        %a{:href => "http://foundation.zurb.com/", :target => "_blank"} Foundation
+        %footer
+            .row
+                .columns
+                    .hr
+                        %dl
+                            %dt Design
+                            %dd
+                                %a{:href => "http://victordarras.fr/", :target => "_blank", :title => "Web and print Designer"} Victor Darras
+                        %dl
+                            %dt Development
+                            %dd
+                                %a{:href => "http://www.zaibatsu.fr/", :target => "_blank", :title => "Zaibatsu - Blog de Tom Panier, développeur web"} Tom Panier
+                        %dl
+                            %dt Powered by
+                            %dd
+                                %a{:href => "http://www.sinatrarb.com/", :target => "_blank"} Sinatra
+                                \/
+                                %a{:href => "http://foundation.zurb.com/", :target => "_blank"} Foundation
 
         %script{:src => "/javascripts/jquery.min.js"}
         %script{:src => "/javascripts/app.js"}

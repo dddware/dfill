@@ -9,11 +9,10 @@
     %p.result
 
 .api.large-4.columns
-  %h2 REST API
+  %h2 JSON REST API
 
   %ul
     %li
       Call
       %a.apiLink{'data-href' => "#{request.base_url}/api/", :href => ''}
-    %li The amount ranges from #{@range[:min]} to #{@range[:max]}
-    %li The result will be a JSON array
+    %li You can request from #{@range[:min]} to #{@range[:max]} lines
