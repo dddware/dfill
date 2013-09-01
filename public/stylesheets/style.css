@@ -5028,15 +5028,35 @@ body > footer dl {
   body > footer dl dt, body > footer dl dd {
     display: inline; }
 
+header {
+  background: #2ba6cb;
+  margin-bottom: 20px; }
+  header h1 {
+    color: white;
+    display: inline-block;
+    margin-bottom: -10px; }
+  header h2 {
+    color: white;
+    display: block;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: normal; }
+
 .lineSelector {
   line-height: 32px;
   margin-bottom: 20px; }
 
 .refresh {
   float: right;
-  padding: 4px 6px; }
+  padding: 4px 6px;
+  margin-bottom: 0; }
   .refresh span {
     font-size: 32px; }
+
+.lines {
+  color: #2ba6cb;
+  font-weight: bolder; }
 
 .amount {
   width: 100%;
@@ -5052,7 +5072,8 @@ body > footer dl {
   height: 16px;
   border: 4px solid #555555;
   border-radius: 50%;
-  background: white; }
+  background: #2ba6cb;
+  box-shadow: inset 0 2px 1px rgba(255, 255, 255, 0.5); }
 
 .result {
   clear: both;
