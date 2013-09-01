@@ -5055,7 +5055,8 @@ body > footer dl {
   background: white; }
 
 .result {
-  clear: both; }
+  clear: both;
+  text-align: justify; }
 
 .admin-list {
   list-style-type: none; }
