@@ -3,10 +3,8 @@
 
   %form
     %label
-      Lines
-      %select.amount
-        - (1..100).each do |counter|
-          %option{:value => counter, :selected => ('selected' if counter == 10)} #{counter}
+      %span.lineNumber
+      %input{ :type => 'range', :class=> 'amount', :min => 1, :max => 100, :value => 10 }
 
     %textarea.result
 

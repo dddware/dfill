@@ -10,15 +10,16 @@
             $.getJSON('/api/' + amount, function(json) {
                 app.resultBlock.html(json.join(' '));
                 app.resultBlock.css('height', '0px');
-                app.resultBlock.css('height', ($that[0].scrollHeight + parseInt($that.css('padding-top')) + parseInt($that.css('padding-bottom'))) + 'px');
+                app.resultBlock.css('height', (app.resultBlock[0].scrollHeight + parseInt(app.resultBlock.css('padding-top')) + parseInt(app.resultBlock.css('padding-bottom'))) + 'px');
                 app.resultBlock.select();
+                $('.lineNumber').html(amount+' line' + (amount > 1 ? 's' : ''));
             });
         }
     };
 
     App.amountSelect.on('change', function() {
         App.resultBlock.css({
-            'min-height': $that.css('height'),
+            'min-height': $(this).css('height'),
             overflow: 'hidden'
         });
 
