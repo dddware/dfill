@@ -3,10 +3,10 @@
 
   %form
     .lineSelector
-      %button.refresh
+      %button.refresh{:type => 'button'}
         %span ⟳
       %span.lines 0
-      %input{ :type => 'range', :class=> 'amount', :min => @range[:min], :max => @range[:max], :value => @range[:value] }
+      %input{:type => 'range', :class=> 'amount', :min => @range[:min], :max => @range[:max], :value => @range[:value]}
 
     %p.result
 
