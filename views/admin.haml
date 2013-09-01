@@ -10,7 +10,7 @@
 %form.admin-add{:method => "POST"}
     %fieldset
         %legend Add lines
-        - (1..5).each do |counter|
+        - (1..@range[:value]).each do |counter|
             %label
                 %input{:type => "text", :name => "line#{counter}"}
         %label

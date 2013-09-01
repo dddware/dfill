@@ -39,14 +39,21 @@ end
 
 # ROUTES - Front-end
 
+range = {
+    :min => 1,
+    :max => 100,
+    :value => 10
+}
+
 get '/' do
+    @range = range
     haml :index
 end
 
 get '/api/:count' do
     count = params[:count].to_i
 
-    unless (count > 0 && count <= 100) then
+    unless (count >= range[:min] && count <= range[:max]) then
         halt 400
     end
 
@@ -68,6 +75,7 @@ end
 
 get '/admin' do
     protected!
+    @range = range
     @lines = Line.all :order => :id.desc
 
     haml :admin
@@ -75,7 +83,7 @@ end
 
 post '/admin' do
     protected!
-    (1..5).each do |counter|
+    (1..range[:value]).each do |counter|
         line = Line.new
         line.content = params["line#{counter}"]
         line.save

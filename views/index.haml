@@ -3,17 +3,17 @@
 
   %form
     %label
-      %span.lineNumber
-      %input{ :type => 'range', :class=> 'amount', :min => 1, :max => 100, :value => 10 }
+      %span.lines 0
+      %input{ :type => 'range', :class=> 'amount', :min => @range[:min], :max => @range[:max], :value => @range[:value] }
 
     %textarea.result
 
 .api.large-4.columns
-  %h2 Remotely
+  %h2 REST API
 
   %p
-    Just query
+    Access our service remotely by calling
     %a{:href => '/api/n'}= "#{request.base_url}/api/n"
-    where n is an integer from 1 to 100 representing the amount of lines you need. You will get these in JSON format.
+    where n is an integer from #{@range[:min]} to #{@range[:max]} representing the amount of lines you need. You will get these in JSON format.
     %br
     For the record, this is the exact same API this application itself queries when you use it.
