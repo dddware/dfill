@@ -1,4 +1,22 @@
+function selectText(element) {
+    var doc = document;
+    var text = element[0];    
+
+    if (doc.body.createTextRange) { // ms
+        var range = doc.body.createTextRange();
+        range.moveToElementText(text);
+        range.select();
+    } else if (window.getSelection) { // moz, opera, webkit
+        var selection = window.getSelection();            
+        var range = doc.createRange();
+        range.selectNodeContents(text);
+        selection.removeAllRanges();
+        selection.addRange(range);
+    }
+}
+
 window.App = {
+
     result: $('.result'),
     range: $('.amount'),
     counter: $('.lines'),
@@ -25,7 +43,7 @@ window.App = {
         });
 
         // Self-calling DOM listener
-        app.range.on('change', function() {
+        app.range.on('change click', function() {
             app.toggleLines(app.range.val());
         }).change();
     },
@@ -45,7 +63,7 @@ window.App = {
         // Elsatic textarea update
         app.result.css('height', 0);
         app.result.css('height', (app.result[0].scrollHeight + parseInt(app.result.css('padding-top')) + parseInt(app.result.css('padding-bottom'))) + 'px');
-        app.result.select();
+        selectText(app.result);
     },
 };
 
