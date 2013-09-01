@@ -13,9 +13,9 @@
 .api.large-4.columns
   %h2 REST API
 
-  %p
-    Access our service remotely by calling
-    %a{:href => '/api/n'}= "#{request.base_url}/api/n"
-    where n is an integer from #{@range[:min]} to #{@range[:max]} representing the amount of lines you need. You will get these in JSON format.
-    %br
-    For the record, this is the exact same API this application itself queries when you use it.
+  %ul
+    %li
+      Call
+      %a.apiLink{'data-href' => "#{request.base_url}/api/", :href => ''}
+    %li The amount ranges from #{@range[:min]} to #{@range[:max]}
+    %li The result will be a JSON array

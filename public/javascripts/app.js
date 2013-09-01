@@ -1,8 +1,9 @@
 window.App = {
     result: $('.result'),
     range: $('.amount'),
-    counter: $('.lines'),
     reload: $('.refresh'),
+    counter: $('.lines'),
+    link: $('.apiLink'),
     lines: [],
 
     loadLines: function() {
@@ -30,6 +31,7 @@ window.App = {
         // DOM updates
         app.result.html(lines.join(' '));
         app.counter.html(amount + ' line' + (amount > 1 ? 's' : '') + (amount == 100 ? '!' : ''));
+        app.link.attr('href', app.link.data('href') + amount).text(app.link.attr('href'));
 
         // Elastic textarea update
         app.result.css('height', 0);
