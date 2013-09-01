@@ -1,5 +1,17 @@
-%h3
-    Want to use this in your code?
+%h2 Generate placeholder text
+
+%form
+    %fieldset
+        %label
+            Lines
+            %select.amount
+                - (1..100).each do |counter|
+                    %option{:value => counter, :selected => ('selected' if counter == 10)} #{counter}
+
+        .result
+
+%h2 Remotely
+
 %p
     Just query
     %a{:href => '/api/n'}= "#{request.base_url}/api/n"
