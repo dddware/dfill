@@ -5024,6 +5024,12 @@ body > footer dl {
   body > footer dl dt, body > footer dl dd {
     display: inline; }
 
+header {
+  background: #2ba6cb;
+  margin-bottom: 20px; }
+  header h1 {
+    color: white; }
+
 .lineSelector {
   line-height: 32px;
   margin-bottom: 20px; }
@@ -5048,7 +5054,8 @@ body > footer dl {
   height: 16px;
   border: 4px solid #555555;
   border-radius: 50%;
-  background: white; }
+  background: #2ba6cb;
+  box-shadow: inset 0 2px 1px rgba(255, 255, 255, 0.5); }
 
 .result {
   clear: both; }
