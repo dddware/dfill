@@ -5015,12 +5015,8 @@ a.th {
   .f-dropdown.large {
     max-width: 800px; }
 
-h2 {
-  font-size: 1.375em; }
-
-ul {
-  list-style-type: square;
-  list-style-position: inside; }
+body {
+  font-family: "Open sans", Helvetica, Arial, sans-serif; }
 
 body > footer .hr {
   margin-top: 0.25em;
@@ -5031,6 +5027,13 @@ body > footer dl {
   font-size: 0.75em; }
 body > footer dt, body > footer dd {
   display: inline; }
+
+h2 {
+  font-size: 1.375em; }
+
+ul {
+  list-style-type: square;
+  list-style-position: inside; }
 
 header {
   background: #2ba6cb;
@@ -5054,7 +5057,8 @@ header {
 
 .refresh {
   float: right;
-  padding: 4px 6px;
+  padding: 2px 5px;
+  line-height: 32px;
   margin-bottom: 0; }
   .refresh span {
     font-size: 32px; }
