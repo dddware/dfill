@@ -1,7 +1,9 @@
 # DFILL
-## Generate placeholder text with song lyrics
+_Generate placeholder text with song lyrics_
+
 
 Lyrics from:
+
 - Enter Shikari
 
 ## Install
@@ -17,3 +19,4 @@ Lyrics from:
 // Run the sinatra application
   $ bundle exec ruby dfill.rb
 </pre>
+
