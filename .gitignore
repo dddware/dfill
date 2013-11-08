@@ -3,3 +3,5 @@ Gemfile.lock
 log/
 tmp/
 passenger*
+vendor/
+.bundle/

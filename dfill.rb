@@ -52,13 +52,13 @@ range = {
 }
 
 get '/' do
-    check_domain!
+    # check_domain!
     @range = range
     haml :index
 end
 
 get '/api/:count' do
-    check_domain!
+    # check_domain!
     count = params[:count].to_i
 
     unless (count >= range[:min] && count <= range[:max]) then
@@ -82,7 +82,7 @@ end
 # ROUTES - Back-end
 
 get '/admin' do
-    check_domain!
+    # check_domain!
     protected!
     @range = range
     @lines = Line.all :order => :id.desc
@@ -91,7 +91,7 @@ get '/admin' do
 end
 
 post '/admin' do
-    check_domain!
+    # check_domain!
     protected!
     (1..range[:value]).each do |counter|
         line = Line.new
@@ -104,7 +104,7 @@ post '/admin' do
 end
 
 get '/admin/delete/:id' do
-    check_domain!
+    # check_domain!
     protected!
     line = Line.get params[:id]
     line.destroy
