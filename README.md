@@ -8,15 +8,15 @@ Lyrics from:
 
 ## Install
 
-<pre>
-// Clone the repository
-  $ git clone git@bitbucket.org:denain/dfill.git
-  $ cd dfill/
 
-// Install dependencies
-  $ bundle install
+    // Clone the repository
+    $ git clone git@bitbucket.org:denain/dfill.git
+    $ cd dfill/
 
-// Run the sinatra application
-  $ bundle exec ruby dfill.rb
-</pre>
+    // Install dependencies
+    $ bundle install
+
+    // Run the sinatra application
+    $ bundle exec ruby dfill.rb
+
 
