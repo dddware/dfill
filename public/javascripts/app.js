@@ -33,10 +33,6 @@ window.App = {
         app.counter.html(amount + ' line' + (amount > 1 ? 's' : '') + (amount == 100 ? '!' : ''));
         app.link.attr('href', app.link.data('href') + amount).text(app.link.attr('href'));
 
-        // Elastic textarea update
-        app.result.css('height', 0);
-        app.result.css('height', (app.result[0].scrollHeight + parseInt(app.result.css('padding-top')) + parseInt(app.result.css('padding-bottom'))) + 'px');
-
         // Result selection
         if (document.body.createTextRange) {
             var range = document.body.createTextRange();
@@ -53,12 +49,6 @@ window.App = {
 
     init: function() {
         var app = this;
-
-        // Elastic textarea setup
-        app.result.css({
-            'min-height': app.result.css('height'),
-            overflow: 'hidden'
-        });
 
         // DOM listeners
         app.range.on('change click', function() {
