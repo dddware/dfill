@@ -24,8 +24,8 @@ DataMapper.finalize.auto_upgrade!
 
 helpers do
     def check_domain!
-        if request.env['HTTP_HOST'] != 'localhost:3001'
-            redirect 'http://www.dfill.cc' + request.env['REQUEST_URI']
+        if request.env['HTTP_HOST'] != 'localhost:3002'
+            redirect 'http://dfill.cc' + request.env['REQUEST_URI']
         end
     end
 
@@ -37,7 +37,7 @@ helpers do
 
     def authorized?
         @auth ||=  Rack::Auth::Basic::Request.new(request.env)
-        @auth.provided? and @auth.basic? and @auth.credentials and @auth.credentials == ['dfill', 'spermedeponey?']
+        @auth.provided? and @auth.basic? and @auth.credentials and @auth.credentials == ['dfill', 'sperme2poney?']
     end
 end
 
