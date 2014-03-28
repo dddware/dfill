@@ -20,7 +20,7 @@ _Generate placeholder text with song lyrics_
 
 ## Administration
 
-Create a `config.rb` file at the application route with the following contents :
+Create a `config.rb` file at the application root with the following contents :
 
     $config = {
         :login => 'dfill',
