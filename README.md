@@ -14,7 +14,7 @@ _Generate placeholder text with song lyrics_
     $ bundle install
 
     // Run application
-    $ bundle exec ruby dfill.rb
+    $ bundle exec ruby dfill.rb -p 3002
 
 
 
