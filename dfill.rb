@@ -3,6 +3,7 @@ require 'haml'
 require 'data_mapper'
 require 'dm-sqlite-adapter'
 require 'json'
+require './config'
 
 
 
@@ -37,7 +38,7 @@ helpers do
 
     def authorized?
         @auth ||=  Rack::Auth::Basic::Request.new(request.env)
-        @auth.provided? and @auth.basic? and @auth.credentials and @auth.credentials == ['dfill', 'sperme2poney?']
+        @auth.provided? and @auth.basic? and @auth.credentials and @auth.credentials == [$config[:login], $config[:password]]
     end
 end
 
