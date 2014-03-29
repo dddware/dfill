@@ -1,0 +1,54 @@
+/*
+Syntax error: Invalid CSS after "...ial, sans-serif": expected expression (e.g. 1px, bold), was "; }"
+        on line 2 of stylesheets/style.css
+
+1: body {
+2:   font-family: "Open sans", Helvetica, Arial, sans-serif; }
+3: 
+4: body > footer .hr {
+5:   margin-top: 0.25em;
+6:   padding: 1.25em 0;
+7:   border-top: 1px solid #cccccc; }
+
+Backtrace:
+stylesheets/style.css:2
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/scss/parser.rb:1306:in `expected'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/script/lexer.rb:216:in `expected!'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/script/parser.rb:600:in `assert_done'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/script/parser.rb:57:in `parse'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/script/parser.rb:177:in `parse'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/script.rb:27:in `parse'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/engine.rb:1129:in `parse_script'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/engine.rb:728:in `parse_property'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/engine.rb:699:in `parse_property_or_rule'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/engine.rb:665:in `parse_line'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/engine.rb:543:in `build_tree'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/engine.rb:562:in `block in append_children'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/engine.rb:561:in `each'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/engine.rb:561:in `append_children'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/engine.rb:552:in `block in build_tree'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/engine.rb:545:in `each'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/engine.rb:545:in `build_tree'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/engine.rb:562:in `block in append_children'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/engine.rb:561:in `each'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/engine.rb:561:in `append_children'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/engine.rb:412:in `_to_tree'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/engine.rb:274:in `render'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/plugin/compiler.rb:414:in `update_stylesheet'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/plugin/compiler.rb:189:in `block in update_stylesheets'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/plugin/compiler.rb:186:in `each'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/plugin/compiler.rb:186:in `update_stylesheets'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/plugin/compiler.rb:221:in `watch'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/plugin.rb:108:in `method_missing'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/exec.rb:509:in `watch_or_update'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/exec.rb:346:in `process_result'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/exec.rb:43:in `parse'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/exec.rb:22:in `parse!'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.3.4/bin/sass:13:in `<top (required)>'
+C:/Ruby200/bin/sass:23:in `load'
+C:/Ruby200/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Invalid CSS after \"...ial, sans-serif\": expected expression (e.g. 1px, bold), was \"; }\"\A         on line 2 of stylesheets/style.css\A \A 1: body {\A 2:   font-family: \"Open sans\", Helvetica, Arial, sans-serif; }\A 3: \A 4: body > footer .hr {\A 5:   margin-top: 0.25em;\A 6:   padding: 1.25em 0;\A 7:   border-top: 1px solid #cccccc; }"; }

@@ -1,15 +1,4 @@
 .row
-    .column
-        - unless (@lines.length > 0)
-            %p No lines yet!
-        - else
-            %ul.admin-list
-                - @lines.each do |line|
-                    %li
-                        #{line.content} -
-                        %a{:href => "/admin/delete/#{line.id}", :onclick => "return confirm('Are you sure?');"} Delete
-
-.row
     %form.column.admin-add{:method => "POST"}
         %fieldset
             %legend Add lines
@@ -17,4 +6,17 @@
                 %label
                     %input{:type => "text", :name => "line#{counter}"}
             %label
-                %button{:type => "submit"} Go
+                %button{:type => "submit"} 
+                    ADD
+                    %span +
+
+.row
+    .column
+        - unless (@lines.length > 0)
+            %p No lines yet!
+        - else
+            %ul.admin-list.messy
+                - @lines.each do |line|
+                    %li
+                        %a.delete-lyric{:href => "/admin/delete/#{line.id}", :onclick => "return confirm('Are you sure?');"} ✖
+                        #{line.content}

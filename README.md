@@ -14,8 +14,11 @@ _Generate placeholder text with song lyrics_
     $ bundle install
 
     // Run application
-    $ bundle exec ruby dfill.rb
-
+    $ ruby dfill.rb -p 3002
+    // $ bundle exec ruby dfill.rb
+    
+    // Run sass watch for integration
+    $ sass --watch stylesheets/style.sass:public/stylesheets.style.css
 
 
 ## Administration
