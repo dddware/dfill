@@ -2,8 +2,6 @@
 
 _Generate placeholder text with song lyrics_
 
-
-
 ## Install
 
     // Clone the repository
@@ -17,9 +15,6 @@ _Generate placeholder text with song lyrics_
     // Run sass watch for integration
     $ sass --watch stylesheets/style.sass:public/stylesheets.style.css
     $ bundle exec ruby dfill.rb -p 3002
-
->>>>>>> 3068f01dce0ca771ecbeb4d098287bc87257c64f
-
 
 ## Administration
 
